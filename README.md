@@ -1,11 +1,11 @@
-WebServer(可通过php-fpm解析php)
+YAWebServer(可通过php-fpm解析php)
 ==============================
 
 ##依赖
 - [ahttpd](https://github.com/lucklove/ahttpd)
 
 ##编译
-- cd WebServer
+- cd YAWebServer
 - mkdir build
 - cd build
 - cmake ..
