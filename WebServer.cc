@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <typeinfo>
 
+using namespace ahttpd;
+
 namespace {
 /**
  * \biref 查找index文件，目前仅支持index.html和index.php
@@ -48,7 +50,7 @@ WebServer::handleRequest(RequestPtr req, ResponsePtr res)
 
 	if(is_dir(doc_root + path) && path[path.size()-1] != '/') {
 		res->setStatus(302);
-		if(typeid(res->connection()) == typeid(SslConnectionPtr)) {
+		if(strcmp(res->connectionType(), "ssl") == 0) {
 			res->addHeader("Location", "https://" + *host + path + "/");
 		} else {
 			res->addHeader("Location", "http://" + *host + path + "/");
