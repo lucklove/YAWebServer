@@ -4,7 +4,7 @@ YAWebServer(可通过php-fpm解析php)
 ##依赖
 - [ahttpd](https://github.com/lucklove/ahttpd)
 
-##编译
+##编译(先安装[ahttpd](https://github.com/lucklove/ahttpd))
 - cd YAWebServer
 - mkdir build
 - cd build
