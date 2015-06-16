@@ -22,3 +22,7 @@ archlinux(`sudo pacman -S php-fpm`), centos(`sudo yum install php-fpm`).
 ##运行
 - sudo php-fpm(optional)
 - ./WebServer doc_root(doc_root必须为绝对路径)
+
+##注意
+  php-fpm要求doc_root的各级目录都至少可读，所以访问放在/home/user及其子孙目录下的php文件时可能报404,  
+因为php-fpm默认以apache这个用户启动，而/home/user的目录权限默认为700，apache对该级目录没有读权限.
